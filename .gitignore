@@ -1,0 +1,29 @@
+# Quarto output
+/.quarto/
+/_site/
+*_files/
+*_cache/
+_freeze/
+
+# R/RStudio
+*.Rproj
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*~
+.Rproj.user

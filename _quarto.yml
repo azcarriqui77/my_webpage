@@ -1,0 +1,31 @@
+project:
+  type: website
+  resources:
+    - keybase.txt
+    - resume.pdf
+    - cv_spanish.pdf
+    - cv_english.pdf
+
+website:
+  title: "Álvaro Zorrilla Carriquí"
+  site-url: https://azcarriqui77.github.io/my_webpage/
+  description: "Researcher, Data Scientist and Artificial Intelligence enthusiast."
+  open-graph:
+    locale: es_ES
+  twitter-card:
+    creator: "@azcarriqui77"
+  comments:
+    utterances:
+      repo: azcarriqui77/my_webpage
+  navbar:
+    right:
+      - text: "Home"
+        href: index.html
+      - text: "CV"
+        href: cv
+  page-footer:
+    left: "© Copyright 2025 Álvaro Zorrilla. Except where otherwise noted, all text and images licensed CC-BY-NC 4.0."
+format:
+  html:
+    theme: [sandstone, _variables.scss]
+    css: styles.css
