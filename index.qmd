@@ -1,5 +1,5 @@
 ---
-title: "Álvaro Zorrilla carriquí"
+title: "Álvaro Zorrilla Carriquí"
 image: avatar.jpg
 about:
   template: trestles
@@ -9,12 +9,14 @@ about:
     - text: GitHub
       icon: github
       url: "https://github.com/azcarriqui77"
-    - text: Email
-      url: "alzorrcarri@ugr.es | alzorrcarri@go.ugr.es"
+    - text: e-Mail UGR
+      url: "alzorrcarri@ugr.es"
+    - text: e-Mail Google
+      url: "alzorrcarri@go.ugr.es"
     - text: CV (spanish)
-      url: "cv_spanish.pdf"
+      url: cv_spanish.pdf
     - text: CV (english)
-      url: "cv_english.pdf"
+      url: cv_english.pdf
 comments: false
 ---
 ::: {.column-page}
@@ -27,9 +29,9 @@ Professionally, he has excelled as a researcher at GENYO, focusing on the develo
 
 Beyond research, Álvaro has demonstrated his competitive edge by winning the Cajamar University Hack Datathon and being named a finalist in several national AI and bioinformatics conferences. He is proficient in Python, R, and C++, holds a C1 English certification, and has experience as a private tutor in scientific disciplines.
 
-Currently, he is pursuing a PhD's degree at Universidad de Granada about Technologies of Communication and Information, belonging to the group for Signal Processing and Biomedical Applications (SiPBA). His research focuses mainly on developing prediction algorithm for the thermal behaviour of power transformers, although he collaborates with biomedical-related projects.
+Currently, he is pursuing a PhD degree at Universidad de Granada about Technologies of Communication and Information, belonging to the group for Signal Processing and Biomedical Applications (SiPBA). His research focuses mainly on developing prediction algorithm for the thermal behaviour of power transformers, although he collaborates with biomedical-related projects.
 
-The full CV is available in both Spanish (cv_spanish.pdf) and English (cv_english.pdf)
+The full CV is available in both [Spanish](cv_spanish.pdf) and [English](cv_english.pdf)
 
 <p></p>
 
