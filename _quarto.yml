@@ -1,8 +1,6 @@
 project:
   type: website
   resources:
-    - keybase.txt
-    - resume.pdf
     - cv_spanish.pdf
     - cv_english.pdf
 
@@ -21,8 +19,6 @@ website:
     right:
       - text: "Home"
         href: index.html
-      - text: "CV"
-        href: cv
   page-footer:
     left: "© Copyright 2025 Álvaro Zorrilla. Except where otherwise noted, all text and images licensed CC-BY-NC 4.0."
 format:
