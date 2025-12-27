@@ -27,5 +27,5 @@ website:
     left: "© Copyright 2025 Álvaro Zorrilla. Except where otherwise noted, all text and images licensed CC-BY-NC 4.0."
 format:
   html:
-    theme: [sandstone, _variables.scss]
+    theme: [cosmo, _variables.scss]
     css: styles.css
