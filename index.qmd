@@ -5,17 +5,22 @@ about:
   template: trestles
   links:
     - text: LinkedIn
+      icon: linkedin
       url: "https://www.linkedin.com/in/alzorrcarri/"
     - text: GitHub
       icon: github
       url: "https://github.com/azcarriqui77"
     - text: e-Mail UGR
+      icon: mailbox
       url: "alzorrcarri@ugr.es"
     - text: e-Mail Google
+      icon: google
       url: "alzorrcarri@go.ugr.es"
     - text: CV (spanish)
+      icon: file-earmark-pdf-fill
       url: cv_spanish.pdf
     - text: CV (english)
+      icon: file-earmark-pdf-fill
       url: cv_english.pdf
 comments: false
 ---
