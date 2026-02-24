@@ -19,6 +19,8 @@ website:
     right:
       - text: "Home"
         href: index.html
+      - text: "CV"
+        href: cv/index.html
   page-footer:
     left: "© Copyright 2025 Álvaro Zorrilla. Except where otherwise noted, all text and images licensed CC-BY-NC 4.0."
 format:

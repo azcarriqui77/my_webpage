@@ -1,0 +1,16 @@
+---
+title: "CV"
+---
+
+::: {.column-page}
+
+## Curriculum Vitae
+
+El CV completo está disponible en las siguientes versiones:
+
+- **[CV en Español (PDF)](../cv_spanish.pdf)**
+- **[CV en Inglés (PDF)](../cv_english.pdf)**
+
+Puedes descargar los archivos PDF para ver el curriculum detallado.
+
+:::
