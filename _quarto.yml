@@ -16,6 +16,7 @@ website:
     utterances:
       repo: azcarriqui77/my_webpage
   navbar:
+    background: transparent
     right:
       - text: "Home"
         href: index.html
@@ -23,7 +24,13 @@ website:
         href: cv/index.html
   page-footer:
     left: "© Copyright 2025 Álvaro Zorrilla. Except where otherwise noted, all text and images licensed CC-BY-NC 4.0."
+    border: false
 format:
   html:
-    theme: slate
+    theme:
+      light: [litera, theme-light.scss]
+      dark: [darkly, theme-dark.scss]
     css: styles.css
+    smooth-scroll: true
+    link-external-icon: false
+    link-external-newwindow: true

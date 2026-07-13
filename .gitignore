@@ -27,3 +27,5 @@ Thumbs.db
 # Temporary files
 *~
 .Rproj.user
+
+**/*.quarto_ipynb

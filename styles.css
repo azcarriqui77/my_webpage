@@ -1,1 +1,255 @@
-/* css styles */
+/* ---------------------------------------------------------------- */
+/* Fonts                                                             */
+/* ---------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* ---------------------------------------------------------------- */
+/* Design tokens                                                     */
+/* Light/dark values for --azc-* custom properties are defined in    */
+/* theme-light.scss and theme-dark.scss (each compiles into its own  */
+/* bundle; Quarto loads both and toggles via body.quarto-dark /      */
+/* body.quarto-light). Do NOT redefine --azc-* on :root here — both  */
+/* bundles are present in the DOM at once, and a plain :root rule in */
+/* this file would load last and silently override whichever theme  */
+/* is active.                                                        */
+/* ---------------------------------------------------------------- */
+:root {
+  --azc-radius: 12px;
+  --azc-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------------------------------------------------------------- */
+/* Base typography                                                   */
+/* ---------------------------------------------------------------- */
+body {
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+.title, .quarto-title-block .title {
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  margin-top: 3rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--azc-border);
+}
+
+p {
+  max-width: 68ch;
+}
+
+a {
+  transition: color 0.15s var(--azc-ease);
+}
+
+/* Underline-on-hover for inline body links, not nav/buttons */
+.column-page a:not(.btn):not(.nav-link):not(.about-link),
+main p a:not(.btn):not(.nav-link):not(.about-link) {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.25s var(--azc-ease);
+}
+.column-page a:not(.btn):not(.nav-link):not(.about-link):hover,
+main p a:not(.btn):not(.nav-link):not(.about-link):hover {
+  background-size: 100% 1px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Navbar                                                             */
+/* ---------------------------------------------------------------- */
+.navbar {
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--azc-border);
+  transition: background-color 0.2s var(--azc-ease);
+}
+
+.navbar-title {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.navbar .nav-link {
+  font-family: "Inter", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.2rem !important;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: -0.1rem;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s var(--azc-ease);
+  opacity: 0.7;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+/* ---------------------------------------------------------------- */
+/* About page (trestles template)                                    */
+/* ---------------------------------------------------------------- */
+.about-entity .about-image {
+  border-radius: var(--azc-radius);
+  box-shadow: var(--azc-shadow);
+  transition: box-shadow 0.3s var(--azc-ease), transform 0.3s var(--azc-ease);
+}
+
+.about-entity .about-image:hover {
+  box-shadow: var(--azc-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.about-entity .about-links {
+  margin-top: 1.25rem;
+}
+
+.about-link {
+  border: 1px solid var(--azc-border) !important;
+  border-radius: 999px !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--azc-ink) !important;
+  background: var(--azc-surface);
+  transition: border-color 0.2s var(--azc-ease), color 0.2s var(--azc-ease),
+    transform 0.2s var(--azc-ease), box-shadow 0.2s var(--azc-ease);
+}
+
+.about-link:hover {
+  border-color: var(--azc-accent) !important;
+  color: var(--azc-accent) !important;
+  transform: translateY(-1px);
+  box-shadow: var(--azc-shadow);
+}
+
+.about-link .about-link-text {
+  font-family: "Inter", sans-serif;
+}
+
+.about-entity h1.title {
+  font-size: 2.4rem;
+  border-bottom: none;
+}
+
+/* ---------------------------------------------------------------- */
+/* Highlight chips (index.qmd)                                       */
+/* ---------------------------------------------------------------- */
+.azc-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.azc-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: var(--azc-surface);
+  border: 1px solid var(--azc-border);
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--azc-muted);
+  box-shadow: var(--azc-shadow);
+}
+
+.azc-chip::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--azc-accent);
+  flex: none;
+}
+
+/* ---------------------------------------------------------------- */
+/* Cards / listings (blog, papers, presentations)                    */
+/* ---------------------------------------------------------------- */
+.card, .quarto-grid-item {
+  border-radius: var(--azc-radius) !important;
+  border-color: var(--azc-border) !important;
+  box-shadow: var(--azc-shadow);
+  transition: box-shadow 0.25s var(--azc-ease), transform 0.25s var(--azc-ease);
+}
+
+.card:hover, .quarto-grid-item:hover {
+  box-shadow: var(--azc-shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Empty-state placeholder blocks */
+.azc-empty-state {
+  border: 1px dashed var(--azc-border);
+  border-radius: var(--azc-radius);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--azc-muted);
+  background: var(--azc-surface);
+  margin: 2rem 0;
+}
+
+.azc-empty-state .azc-empty-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  color: var(--azc-accent);
+}
+
+/* ---------------------------------------------------------------- */
+/* Footer                                                             */
+/* ---------------------------------------------------------------- */
+.page-footer {
+  font-family: "Inter", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  color: var(--azc-muted);
+  border-top: 1px solid var(--azc-border);
+  padding-top: 1.5rem;
+}
+
+/* ---------------------------------------------------------------- */
+/* Motion                                                             */
+/* ---------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  main.content {
+    animation: azc-fade-up 0.5s var(--azc-ease) both;
+  }
+}
+
+@keyframes azc-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

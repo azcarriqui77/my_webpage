@@ -1,0 +1,72 @@
+/*-- scss:defaults --*/
+
+// Palette — "ink & teal" editorial dark
+$void:         #121316 !default;
+$void-raised:  #1b1d21 !default;
+$fog:          #ededea !default;
+$fog-muted:    #a3a29b !default;
+$teal:         #4fd8c4 !default;
+$teal-bright:  #7ee6d6 !default;
+$border-soft:  #2b2d31 !default;
+
+$white:    $fog !default;
+$gray-100: #1e2024 !default;
+$gray-200: $border-soft !default;
+$gray-300: #34363b !default;
+$gray-600: $fog-muted !default;
+$gray-700: #c7c6c0 !default;
+$gray-800: $void-raised !default;
+$gray-900: $void !default;
+
+$primary:   $teal !default;
+$secondary: $fog-muted !default;
+$body-bg:    $void !default;
+$body-color: $fog !default;
+
+$link-color:            $teal !default;
+$link-decoration:       none !default;
+$link-hover-color:      $teal-bright !default;
+
+// Typography
+$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !default;
+$font-family-serif:      "Fraunces", Georgia, "Times New Roman", serif !default;
+$headings-font-family:   $font-family-serif !default;
+$headings-font-weight:   500 !default;
+$headings-color:         $fog !default;
+$font-size-root:         17px !default;
+$line-height-base:       1.65 !default;
+
+// Navbar
+$navbar-bg:               rgba($void, 0.88) !default;
+$navbar-fg:                $fog !default;
+$navbar-hl:                $teal !default;
+$navbar-padding-y:         1.1rem !default;
+
+// Shape & elevation
+$border-radius:       10px !default;
+$border-radius-sm:    8px !default;
+$border-radius-lg:    14px !default;
+$border-color:        $border-soft !default;
+
+$card-bg:            $void-raised !default;
+$card-border-color:  $border-soft !default;
+$card-border-radius: $border-radius-lg !default;
+
+$footer-bg: $void !default;
+$footer-fg: $fog-muted !default;
+
+$min-contrast-ratio: 1.75 !default;
+
+/*-- scss:rules --*/
+
+:root {
+  --azc-bg: #{$void};
+  --azc-surface: #{$void-raised};
+  --azc-ink: #{$fog};
+  --azc-muted: #{$fog-muted};
+  --azc-accent: #{$teal};
+  --azc-accent-dark: #{$teal-bright};
+  --azc-border: #{$border-soft};
+  --azc-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+  --azc-shadow-hover: 0 4px 10px rgba(0,0,0,0.35), 0 16px 32px -14px rgba(0,0,0,0.6);
+}
